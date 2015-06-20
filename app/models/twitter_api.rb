@@ -1,6 +1,6 @@
 class TwitterAPI < ActiveRecord::Base
 
-  require 'rubygems'
+require 'rubygems'
 require 'oauth'
 require 'json'
 
@@ -19,9 +19,9 @@ request = Net::HTTP::Get.new address.request_uri
 # Print data about a list of Tweets
 def print_timeline(tweets)
   # ADD CODE TO ITERATE THROUGH EACH TWEET AND PRINT ITS TEXT
-    tweets.each do |tweet|
-        puts tweet["text"]
-    end
+  tweets.each do |tweet|
+    puts tweet["text"]
+  end
 end
 
 # Set up HTTP.

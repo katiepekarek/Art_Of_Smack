@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
+  get 'show_sign_in/sign_in'
+
   root 'welcome#index'
+
+  
+
+
+
+  #get '/sign-in' => 'sessions#new', as: :signin
+  #get "/signout" => "sessions#destroy", :as => :signout
+
+  #get "/api/authenticate/login" => "bleacher_auth#get_response"
+  #post "/api/authenticate/login.json" => "bleacher_auth#make_request"
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

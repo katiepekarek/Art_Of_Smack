@@ -2,13 +2,38 @@
 <html>
 <head>
   <title>ArtOfSmack</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class= wrapper-home>
+    <nav class="nav-main cf nav-scrolled">
+      <div class="hello">
+        <a href="http://blog.onbondstreet.com/post/121829040954/lets-build-a-better-future">This could be link to Bleacher Report Article. <span class="cta">Read More</span></a>
+      </div>
+      <a class="logo" href="/">Art Of Smack </a>
+      <div class="right nav-items">
+          <% if current_user %>
+            Welcome <%= current_user.name %>!
+            <%= link_to "Sign Out", signout_path %>
+          <% end %>
+      </div>
+   </nav>
+ </div>
 
 <%= yield %>
+
+<ul id="footer">
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Our Products</a></li>
+	<li><a href="#">FAQs</a></li>
+	<li><a href="#">Contact</a></li>
+	<li><a href="#">Login</a></li>
+</ul>
+
 
 </body>
 </html>
